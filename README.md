@@ -24,7 +24,10 @@ A free, open-source alternative to commercial transcription services like Happys
 https://www.loom.com/share/6f612f9f9c4643d1a7229aeed359eb4a?sid=325246e8-c508-4d96-8b75-b07aa7ed156e
 
 
+##join us
 
+[![Discord](https://img.shields.io/discord/1234567890?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/MH2Uq6rPMs)
+[![GitHub Stars](https://img.shields.io/github/stars/moaljumaa/halfwayml_open?style=social)](https://github.com/moaljumaa/halfwayml_open/stargazers)
 
 ## Prerequisites
 
