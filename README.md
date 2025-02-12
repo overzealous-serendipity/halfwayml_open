@@ -19,13 +19,11 @@ HalfwayML - Open Source Transcription & Subtitling
 A free, open-source alternative to commercial transcription services like Happyscribe, Notta, and Amberscript. Built for developers, content creators, and anyone who needs reliable transcription capabilities without the hefty price tag.
 
 ## Quick Demo
-Watch how HalfwayML works:
 
-<div>
-  <a href="https://www.loom.com/share/6f612f9f9c4643d1a7229aeed359eb4a?sid=6f1913e5-933e-4607-b42c-8cdb1f50e836">
-    <img style="max-width:600px;" src="https://cdn.loom.com/sessions/thumbnails/6f612f9f9c4643d1a7229aeed359eb4a-with-play.gif">
-  </a>
-</div>
+[![Watch the demo video](https://cdn.loom.com/sessions/thumbnails/6f612f9f9c4643d1a7229aeed359eb4a-with-play.gif)](https://www.loom.com/share/6f612f9f9c4643d1a7229aeed359eb4a?sid=8576f74d-f382-4bdc-ab05-213754f38c0b)
+
+
+
 
 ## Prerequisites
 
