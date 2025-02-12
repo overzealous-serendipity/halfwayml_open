@@ -117,5 +117,6 @@ We also offer a cloud version at [halfwayml.com](https://halfwayml.com) if you p
 ## Troubleshooting
 
 - Make sure Docker Desktop is running before starting the setup
+- join discord: https://discord.gg/MH2Uq6rPMs
 - If you get permission errors running the setup script, try: `chmod +x setup.sh`
 - If the services don't start, try stopping any existing databases running on port 5432
