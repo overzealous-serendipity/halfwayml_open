@@ -15,6 +15,10 @@ halfwayml provides:
 
 Currently, we support AssemblyAI (which offers $50 free credit to get started), with plans to integrate more models like Groq Whisper and other state-of-the-art options.
 
+HalfwayML - Open Source Transcription & Subtitling
+A free, open-source alternative to commercial transcription services like Happyscribe, Notta, and Amberscript. Built for developers, content creators, and anyone who needs reliable transcription capabilities without the hefty price tag.
+
+
 ## Prerequisites
 
 Before you begin, you'll need to install three essential pieces of software on your computer:
