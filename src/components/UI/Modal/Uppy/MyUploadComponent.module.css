@@ -1,0 +1,54 @@
+/* MyUploadComponent.module.css */
+
+.uppyDashboard :global(.uppy-Dashboard-Item) {
+  padding: 8px;
+  margin-top: 2px;
+  display: flex;
+  align-self: flex-start;
+  justify-self: flex-start;
+  align-items: flex-start; /* This should be 'center' to align items vertically */
+  flex-direction: row;
+  justify-content: flex-flex-start; /* Changed to flex-start to align children to the start of the container */
+  color: white;
+  width: 100%;
+  height: 20%;
+  border-radius: 8px;
+}
+
+.uppyDashboard :global(.uppy-Dashboard-Item-preview) {
+  width: 50px !important; /* Adjust the width as per your design */
+  height: 50px !important; /* Adjust the height as per your design */
+  display: flex !important; /* Ensure it's flex to contain the image/icon correctly */
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 10px !important;
+}
+
+.uppyDashboard :global(.uppy-Dashboard-Item-previewImg),
+.uppyDashboard :global(.uppy-Dashboard-Item-previewIcon) {
+  width: 20px !important; /* Smaller width for the icon */
+  height: 20px !important; /* Smaller height for the icon */
+}
+
+.uppyDashboard :global(.uppy-Dashboard-Item-info) {
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  background-color: transparent !important; /* Assuming you don't want this red */
+}
+
+.uppyDashboard :global(.uppy-Dashboard-Item-name),
+.uppyDashboard :global(.uppy-Dashboard-Item-type) {
+  font-size: 0.8rem !important;
+  color: #302f2fb6 !important;
+  background-color: transparent !important; /* Assuming you don't want this red */
+  overflow: hidden !important; /* To ensure text doesn't overflow */
+  text-overflow: ellipsis !important; /* Adds an ellipsis (...) to text that overflows */
+  white-space: nowrap !important; /* Keeps the text on a single line */
+}
+
+.uppyDashboard :global(.uppy-Dashboard-Item-progress) {
+  height: 4px !important;
+  display: none;
+}

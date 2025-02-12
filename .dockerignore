@@ -1,0 +1,35 @@
+# Node modules and debug logs
+node_modules
+*.log
+
+# Development specific
+.vscode
+*.tsbuildinfo
+*.firebaserc
+*.hintrc
+*.eslintrc.json
+database-debug.log
+firestore-debug.log
+pubsub-debug.log
+ui-debug.log
+test.json
+
+
+# Git and Docker files
+.git
+.gitignore
+Dockerfile
+
+# Build directories
+.next
+tsconfig.tsbuildinfo
+
+# Firebase and security rules (if not used in production)
+firebase.json
+firestore.rules
+storage.rules
+database.rules.json
+
+
+# Documentation
+README.md

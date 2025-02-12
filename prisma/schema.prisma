@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String          @id @default(cuid())
+  email          String          @unique
+  password       String? // For credentials login
+  name           String?
+  workspaces     Workspace[]     @relation("UserWorkspaces")
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  credentials    Credential[]
+  // Additional fields from the Firebase User model
+  role           String          @default("user")
+  transcriptions Transcription[] @relation("TranscriptionEditor")
+  versions       Version[]
+}
+
+model Workspace {
+  id             String          @id @default(cuid())
+  name           String
+  description    String?
+  users          User[]          @relation("UserWorkspaces")
+  transcriptions Transcription[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  createdById    String
+  organizationId String?
+  metaData       Json? // Stores glossary and subtitle preferences
+}
+
+model Transcription {
+  id             String    @id @default(cuid())
+  uuid           String    @unique
+  title          String
+  type           String // 'transcription' | 'subtitle' | 'translation'
+  description    String?
+  status         String // TranscriptionStatus
+  mediaURL       String
+  lastVersionURL String?
+  content        Json? // Store transcription data
+  workspace      Workspace @relation(fields: [workspaceId], references: [id])
+  workspaceId    String
+  editor         User      @relation("TranscriptionEditor", fields: [editorId], references: [id])
+  editorId       String
+  serviceId      String? // ID from AssemblyAI
+  isDeleted      Boolean   @default(false)
+  sharingEnabled Boolean   @default(false)
+  transcribeFrom Int?
+  transcribeTo   Int?
+  state          String?
+
+  meta      Json? // Stores metadata like language, models, etc.
+  versions  Version[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Version {
+  id              String        @id @default(cuid())
+  versionNumber   Int
+  content         Json // Version content
+  url             String
+  transcription   Transcription @relation(fields: [transcriptionId], references: [id])
+  transcriptionId String
+  createdBy       User          @relation(fields: [createdById], references: [id])
+  createdById     String
+  createdAt       DateTime      @default(now())
+}
+
+model EventLog {
+  id           String   @id @default(cuid())
+  entityId     String
+  entityType   String
+  eventType    String // "create" | "update" | "delete" | "other"
+  eventDetails String
+  createdAt    DateTime @default(now())
+}
+
+model Credential {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  name      String
+  key       String
+  secret    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, name])
+}

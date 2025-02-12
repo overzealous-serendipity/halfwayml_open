@@ -1,0 +1,180 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./fonts.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this in your global CSS file */
+input[type="number"]:focus {
+  outline: none; /* Removes the default outline */
+}
+
+/* Custom modal styles */
+.modal-responsive {
+  width: 100%;
+  max-width: 1150px; /* Maximum width */
+  margin: 0 auto; /* Center the modal */
+}
+
+@media (max-width: 1024px) {
+  /* Adjust breakpoint as needed */
+  .modal-responsive {
+    max-width: 90%; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .modal-responsive {
+    max-width: 85%; /* Further adjust size for even smaller screens */
+  }
+}
+
+@media (max-width: 640px) {
+  /* Adjust breakpoint as needed */
+  .modal-responsive {
+    max-width: 80%; /* Adjust size for mobile screens */
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.rhap_progress-filled,
+.rhap_progress-indicator {
+  background: #c77dff; /* Your chosen purple color */
+  color: #c77dff; /* Your chosen purple color */
+}
+.audio-player .rhap_container .rhap_progress-indicator {
+  background: #c77dff !important; /* Your chosen purple color */
+}
+.rhap_container {
+  height: 60px;
+  max-width: 100%;
+  display: flex;
+}
+.rhap_progress-filled {
+  background: #c77dff; /* Your chosen purple color */
+  color: #c77dff; /* Your chosen purple color */
+}
+
+.rhap_progress-filled {
+  background: #c77dff !important;
+}
+
+.rhap_progress-indicator {
+  background: #c77dff !important;
+}
+
+.rhap_progress-bar {
+  background: #c77dff52 !important;
+}
+
+.rhap_progress-bar-show-download {
+  background: #c77dff !important;
+}
+
+@keyframes waveAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.wave {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4f46e5; /* Adjust color to fit your theme */
+}
+
+.wave:not(:last-child) {
+  margin-right: 5px;
+}
+
+.wave:nth-child(1) {
+  animation: waveAnimation 1.2s ease-in-out infinite;
+}
+
+.wave:nth-child(2) {
+  animation: waveAnimation 1.2s ease-in-out 0.2s infinite;
+}
+
+.wave:nth-child(3) {
+  animation: waveAnimation 1.2s ease-in-out 0.4s infinite;
+}
+
+.wave:nth-child(4) {
+  animation: waveAnimation 1.2s ease-in-out 0.6s infinite;
+}
+
+.wave:nth-child(5) {
+  animation: waveAnimation 1.2s ease-in-out 0.8s infinite;
+}
+/* MyUploadComponent.module.css */
+
+.uppyDashboard :global(.uppy-Dashboard-Item) {
+  @apply bg-white border border-gray-300 rounded-lg shadow-sm m-2 p-4 flex flex-col !important;
+}
+
+.uppyDashboard :global(.uppy-DashboardItem-preview) {
+  @apply w-full h-32 bg-cover bg-center flex-none !important;
+}
+
+.uppyDashboard :global(.uppy-DashboardItem-info) {
+  @apply flex-grow p-2 !important;
+}
+
+.uppyDashboard :global(.uppy-DashboardItem-name),
+.uppyDashboard :global(.uppy-DashboardItem-type) {
+  @apply text-sm font-medium text-gray-800 !important;
+}
+
+.uppyDashboard :global(.uppy-DashboardItem-progress) {
+  @apply w-full bg-gray-200 rounded-full overflow-hidden h-1.5 !important;
+}
+
+.uppyDashboard :global(.uppy-DashboardItem-progressInner) {
+  @apply bg-blue-600 h-full rounded-full !important;
+}
+
+/* Tailoring the close button */
+.uppyDashboard :global(.uppy-DashboardItem-action--remove) {
+  @apply text-gray-600 hover:text-gray-800 !important;
+}
+
+/* Styling the 'Add more' button if necessary */
+.uppyDashboard :global(.uppy-Dashboard-addFiles) {
+  @apply text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium !important;
+}
+
+/* Adjust the overall dashboard styles if necessary */
+.uppyDashboard :global(.uppy-Dashboard-inner) {
+  @apply bg-purple-500 p-4 rounded-lg !important;
+}
+
+/* Override the style of the progress bar text, if it's there */
+.uppyDashboard :global(.uppy-DashboardItem-progressText) {
+  @apply text-xs font-semibold text-blue-600 !important;
+}
+.word-span::after {
+  content: " ";
+}
+.active-word {
+  color: #4f46e5;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(
+    circle,
+    hsla(211, 41%, 43%, 0.192) 4px,
+    transparent 1px
+  );
+  background-size: 10px 10px;
+}
+
