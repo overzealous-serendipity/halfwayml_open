@@ -20,7 +20,8 @@ A free, open-source alternative to commercial transcription services like Happys
 
 ## Quick Demo
 
-[![Watch the demo video](https://cdn.loom.com/sessions/thumbnails/6f612f9f9c4643d1a7229aeed359eb4a-with-play.gif)](https://www.loom.com/share/6f612f9f9c4643d1a7229aeed359eb4a?sid=8576f74d-f382-4bdc-ab05-213754f38c0b)
+[![Watch the demo video]] 
+https://www.loom.com/share/6f612f9f9c4643d1a7229aeed359eb4a?sid=325246e8-c508-4d96-8b75-b07aa7ed156e
 
 
 
