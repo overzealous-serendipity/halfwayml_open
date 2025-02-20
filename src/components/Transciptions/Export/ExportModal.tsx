@@ -24,6 +24,7 @@ const ExportModal: FC<ComProps> = ({
   const api = useMemo(() => {
     return axios.create({
       baseURL: process.env.NEXT_PUBLIC_DOMAIN_BASE_URL,
+      withCredentials: true,
     });
   }, []);
 
