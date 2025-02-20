@@ -15,6 +15,8 @@ export default function Custom404() {
         src="/planet.svg"
         alt="Lost planet"
         className="w-48 h-48 md:w-64 md:h-64 mt-4"
+        width={100}
+        height={100}
       />
       <button
         className="mt-4 bg-blue-700 hover:bg-blue-600 text-white py-2 px-6 rounded-lg transition-colors"
