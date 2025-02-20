@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { showToast } from "@/config/redux/store/toastSlice";
@@ -31,11 +31,7 @@ function ApiTab() {
     },
   });
 
-  useEffect(() => {
-    fetchCredential();
-  });
-
-  const fetchCredential = async () => {
+  const fetchCredential = useCallback(async () => {
     try {
       const response = await fetch("/api/settings/credentials");
       if (response.ok) {
@@ -55,7 +51,11 @@ function ApiTab() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [dispatch, setValue]);
+
+  useEffect(() => {
+    fetchCredential();
+  }, [fetchCredential]);
 
   const onSubmit = async (data: { secret: string }) => {
     try {
