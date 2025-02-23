@@ -25,7 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # environment files
-!.env.example
+.env
 
 # firebase credentials
 credentials.json
