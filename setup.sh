@@ -13,7 +13,7 @@ if ! command -v docker &> /dev/null; then
 fi
 
 # Start services
-docker-compose up -d
+docker compose up -d
 
 # Install dependencies
 npm install
